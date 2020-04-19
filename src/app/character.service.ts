@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AbilityScore } from './sheet/AbilityScore';
+import { AbilityScore } from './interface/AbilityScore';
 
 @Injectable({
   providedIn: 'root'

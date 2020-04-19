@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {AbilityScore} from '../AbilityScore';
+import {AbilityScore} from '../../interface/AbilityScore';
 
 @Component({
   selector: 'app-attribute-field',
