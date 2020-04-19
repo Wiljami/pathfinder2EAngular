@@ -14,7 +14,7 @@ import {CharacterService} from '../character.service';
 })
 export class SheetComponent implements OnInit {
 
-  constructor(private character: CharacterService) { }
+  constructor(public character: CharacterService) { }
 
   ngOnInit(): void {
   }
