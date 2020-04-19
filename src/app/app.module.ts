@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { SheetComponent } from './sheet/sheet.component';
 import { CharacterService } from './character.service';
 import {ViewModule} from './sheet/sheet.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import {ViewModule} from './sheet/sheet.module';
   ],
   imports: [
     BrowserModule,
-    ViewModule
+    ViewModule,
+    BrowserAnimationsModule
   ],
   providers: [CharacterService],
   bootstrap: [AppComponent]
