@@ -4,12 +4,12 @@ import {CharacterService} from '../character.service';
 @Component({
   selector: 'app-sheet',
   template: `
-    <p>Strength: {{character.str}}</p>
-    <p>Dexterity: {{character.dex}}</p>
-    <p>Constitution: {{character.con}}</p>
-    <p>Intelligence: {{character.int}}</p>
-    <p>Wisdom: {{character.wis}}</p>
-    <p>Charisma: {{character.cha}}</p>
+    <app-attribute-field [stat]="character.str"></app-attribute-field>
+    <app-attribute-field [stat]="character.dex"></app-attribute-field>
+    <app-attribute-field [stat]="character.con"></app-attribute-field>
+    <app-attribute-field [stat]="character.int"></app-attribute-field>
+    <app-attribute-field [stat]="character.wis"></app-attribute-field>
+    <app-attribute-field [stat]="character.cha"></app-attribute-field>
   `
 })
 export class SheetComponent implements OnInit {
