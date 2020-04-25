@@ -20,7 +20,7 @@ export class AbilityScore {
     }
   }
 
-  setValue(value) {
+  updateValue(value) {
     this.value = value;
     this.updateMod();
   }

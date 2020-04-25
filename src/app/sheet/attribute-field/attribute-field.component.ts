@@ -19,6 +19,6 @@ export class AttributeFieldComponent implements OnInit {
   }
 
   change() {
-    this.stat.setValue(this.value);
+    this.stat.updateValue(this.value);
   }
 }
