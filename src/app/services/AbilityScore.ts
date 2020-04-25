@@ -12,7 +12,6 @@ export class AbilityScore {
 
   updateMod() {
     this.mod = Math.floor((this.value - 10) / 2);
-    console.log(this.mod);
     if (this.mod > 0) {
       this.modPrint = '+' + this.mod;
     } else {
