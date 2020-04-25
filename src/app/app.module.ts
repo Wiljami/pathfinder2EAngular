@@ -9,13 +9,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SkillsFieldComponent } from './sheet/skills-field/skills-field.component';
 import { ProfLevelComponent } from './sheet/prof-level/prof-level.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { SkillEntryComponent } from './sheet/skills-field/skill-entry/skill-entry.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SheetComponent,
     SkillsFieldComponent,
-    ProfLevelComponent
+    ProfLevelComponent,
+    SkillEntryComponent
   ],
   imports: [
     BrowserModule,

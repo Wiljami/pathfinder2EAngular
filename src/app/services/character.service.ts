@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AbilityScore } from './AbilityScore';
+import {Skill} from './Skill';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,42 @@ export class CharacterService {
   int = new AbilityScore('Intelligence', 10);
   wis = new AbilityScore('Wisdom', 10);
   cha = new AbilityScore('Charisma', 10);
+
+  strSkill: Skill = {
+    name: 'placeholder STR skill',
+    stat: this.str,
+    prof: 2
+  };
+
+  dexSkill: Skill = {
+    name: 'placeholder DEX skill',
+    stat: this.dex,
+    prof: 4
+  };
+
+  conSkill: Skill = {
+    name: 'placeholder CON skill',
+    stat: this.con,
+    prof: 6
+  };
+
+  intSkill: Skill = {
+    name: 'placeholder INT skill',
+    stat: this.int,
+    prof: 8
+  };
+
+  wisSkill: Skill = {
+    name: 'placeholder WIS skill',
+    stat: this.wis,
+    prof: 2
+  };
+
+  chaSkill: Skill = {
+    name: 'placeholder CHA skill',
+    stat: this.cha,
+    prof: 4
+  };
 
   constructor() { }
 }
