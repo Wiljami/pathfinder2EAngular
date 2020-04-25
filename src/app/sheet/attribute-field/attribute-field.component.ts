@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {AbilityScore} from '../../interface/AbilityScore';
+import { AbilityScore } from 'src/app/sheet/AbilityScore';
 
 @Component({
   selector: 'app-attribute-field',
@@ -19,7 +19,6 @@ export class AttributeFieldComponent implements OnInit {
   }
 
   change() {
-    console.log(this.value);
-    this.stat.value = this.value;
+    this.stat.setValue(this.value);
   }
 }
