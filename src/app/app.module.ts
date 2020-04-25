@@ -6,11 +6,13 @@ import { SheetComponent } from './sheet/sheet.component';
 import { CharacterService } from './character.service';
 import {ViewModule} from './sheet/sheet.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SkillsFieldComponent } from './sheet/skills-field/skills-field.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SheetComponent
+    SheetComponent,
+    SkillsFieldComponent
   ],
   imports: [
     BrowserModule,

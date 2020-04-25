@@ -10,6 +10,7 @@ import {CharacterService} from '../character.service';
     <app-attribute-field [stat]="character.int"></app-attribute-field>
     <app-attribute-field [stat]="character.wis"></app-attribute-field>
     <app-attribute-field [stat]="character.cha"></app-attribute-field>
+    <app-skills-field></app-skills-field>
   `
 })
 export class SheetComponent implements OnInit {
