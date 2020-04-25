@@ -6,6 +6,7 @@ import { AbilityScore } from './AbilityScore';
 })
 export class CharacterService {
   name = '';
+  level = 1;
 
   str = new AbilityScore('Strength', 10);
   dex = new AbilityScore('Dexterity', 10);

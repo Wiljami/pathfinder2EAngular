@@ -7,17 +7,21 @@ import { CharacterService } from './services/character.service';
 import {ViewModule} from './sheet/sheet.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SkillsFieldComponent } from './sheet/skills-field/skills-field.component';
+import { ProfLevelComponent } from './sheet/prof-level/prof-level.component';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
     AppComponent,
     SheetComponent,
-    SkillsFieldComponent
+    SkillsFieldComponent,
+    ProfLevelComponent
   ],
   imports: [
     BrowserModule,
     ViewModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonToggleModule
   ],
   providers: [CharacterService],
   bootstrap: [AppComponent]
