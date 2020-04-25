@@ -1,10 +1,10 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { AbilityScore } from 'src/app/sheet/AbilityScore';
+import { AbilityScore } from 'src/app/services/AbilityScore';
 
 @Component({
   selector: 'app-attribute-field',
   template: `
-    <p>{{stat.name}}: {{stat.value}}</p>
+    {{stat.modPrint}} MOD {{stat.name}} score:
     <input type="number" matInput [(ngModel)]="value" (change)="change()">
   `
 })
