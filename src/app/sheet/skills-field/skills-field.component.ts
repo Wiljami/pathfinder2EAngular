@@ -5,12 +5,12 @@ import {CharacterService} from '../../services/character.service';
   selector: 'app-skills-field',
   template: `
     <h1>skills field</h1>
-    <p>Placeholder STR skill: + {{character.str.value}}</p>
-    <p>Placeholder DEX skill: + {{character.dex.value}}</p>
-    <p>Placeholder CON skill: + {{character.con.value}}</p>
-    <p>Placeholder INT skill: + {{character.int.value}}</p>
-    <p>Placeholder WIS skill: + {{character.wis.value}}</p>
-    <p>Placeholder CHA skill: + {{character.cha.value}}</p>
+    <p>Placeholder STR skill: {{character.str.modPrint}}</p>
+    <p>Placeholder DEX skill: {{character.dex.modPrint}}</p>
+    <p>Placeholder CON skill: {{character.con.modPrint}}</p>
+    <p>Placeholder INT skill: {{character.int.modPrint}}</p>
+    <p>Placeholder WIS skill: {{character.wis.modPrint}}</p>
+    <p>Placeholder CHA skill: {{character.cha.modPrint}}</p>
   `
 })
 export class SkillsFieldComponent implements OnInit {
