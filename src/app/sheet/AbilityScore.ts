@@ -16,7 +16,7 @@ export class AbilityScore {
     if (this.mod > 0) {
       this.modPrint = '+' + this.mod;
     } else {
-      this.modPrint = this.mod;
+      this.modPrint = '' + this.mod;
     }
   }
 
