@@ -11,13 +11,8 @@ import { ProfLevelComponent } from './sheet/prof-level/prof-level.component';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { SkillEntryComponent } from './sheet/skills-field/skill-entry/skill-entry.component';
 import { PolicyComponent } from './policy/policy.component';
-import { RouterModule, Routes } from '@angular/router';
 import { InventoryComponent } from './inventory/inventory.component';
-
-const appRoutes: Routes = [
-  { path: '', component: SheetComponent},
-  { path: 'inventory', component: InventoryComponent}
-];
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -34,9 +29,10 @@ const appRoutes: Routes = [
     ViewModule,
     BrowserAnimationsModule,
     MatButtonToggleModule,
-    RouterModule.forRoot(appRoutes, { enableTracing: true })
+    AppRoutingModule
   ],
   providers: [CharacterService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
