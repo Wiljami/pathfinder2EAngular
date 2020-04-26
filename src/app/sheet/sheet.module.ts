@@ -18,7 +18,10 @@ import {SkillEntryComponent} from './skills-field/skill-entry/skill-entry.compon
     FormsModule,
   ],
   exports: [
-    AbilityScoreComponent
+    AbilityScoreComponent,
+    AttributesFieldComponent,
+    SavesFieldComponent,
+    SkillsFieldComponent
   ],
   declarations: [
     AbilityScoreComponent,
