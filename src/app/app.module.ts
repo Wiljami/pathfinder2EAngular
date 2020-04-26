@@ -13,6 +13,7 @@ import { SkillEntryComponent } from './sheet/skills-field/skill-entry/skill-entr
 import { PolicyComponent } from './policy/policy.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { AppRoutingModule } from './app-routing.module';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { AppRoutingModule } from './app-routing.module';
     ViewModule,
     BrowserAnimationsModule,
     MatButtonToggleModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatTabsModule
   ],
   providers: [CharacterService],
   bootstrap: [AppComponent]
