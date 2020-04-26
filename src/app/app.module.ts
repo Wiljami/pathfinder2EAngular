@@ -19,6 +19,8 @@ import { SpellbookComponent } from './spellbook/spellbook.component';
 import { BackgroundComponent } from './background/background.component';
 import { SavesFieldComponent } from './sheet/saves-field/saves-field.component';
 import { SavingThrowComponent } from './sheet/saves-field/saving-throw/saving-throw.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { AttributesFieldComponent } from './sheet/attribute-field/attributes-field.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { SavingThrowComponent } from './sheet/saves-field/saving-throw/saving-th
     SpellbookComponent,
     BackgroundComponent,
     SavesFieldComponent,
-    SavingThrowComponent
+    SavingThrowComponent,
+    AttributesFieldComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { SavingThrowComponent } from './sheet/saves-field/saving-throw/saving-th
     BrowserAnimationsModule,
     MatButtonToggleModule,
     AppRoutingModule,
-    MatTabsModule
+    MatTabsModule,
+    MatGridListModule
   ],
   providers: [CharacterService],
   bootstrap: [AppComponent]

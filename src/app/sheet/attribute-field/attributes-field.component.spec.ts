@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AttributeFieldComponent } from './attribute-field.component';
+import { AttributesFieldComponent } from './attributes-field.component';
 
-describe('AttributeFieldComponent', () => {
-  let component: AttributeFieldComponent;
-  let fixture: ComponentFixture<AttributeFieldComponent>;
+describe('AttributesFieldComponent', () => {
+  let component: AttributesFieldComponent;
+  let fixture: ComponentFixture<AttributesFieldComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AttributeFieldComponent ]
+      declarations: [ AttributesFieldComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AttributeFieldComponent);
+    fixture = TestBed.createComponent(AttributesFieldComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

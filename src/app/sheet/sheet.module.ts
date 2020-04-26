@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {AttributeFieldComponent} from './attribute-field/attribute-field.component';
+import {AbilityScoreComponent} from './attribute-field/attribute/ability-score.component';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
 
@@ -11,10 +11,10 @@ import {FormsModule} from '@angular/forms';
     FormsModule,
   ],
   exports: [
-    AttributeFieldComponent
+    AbilityScoreComponent
   ],
   declarations: [
-    AttributeFieldComponent
+    AbilityScoreComponent
   ]
 })
 export class ViewModule {}
