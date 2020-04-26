@@ -10,18 +10,21 @@ import {DetailsFieldComponent} from './details-field/details-field.component';
 import {SkillsFieldComponent} from './skills-field/skills-field.component';
 import {ProfLevelComponent} from './prof-level/prof-level.component';
 import {SkillEntryComponent} from './skills-field/skill-entry/skill-entry.component';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 @NgModule({
   imports: [
     CommonModule,
     MatInputModule,
     FormsModule,
+    MatButtonToggleModule,
   ],
   exports: [
     AbilityScoreComponent,
     AttributesFieldComponent,
     SavesFieldComponent,
-    SkillsFieldComponent
+    SkillsFieldComponent,
+    DetailsFieldComponent
   ],
   declarations: [
     AbilityScoreComponent,

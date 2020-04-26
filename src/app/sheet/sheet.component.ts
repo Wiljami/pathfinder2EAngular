@@ -5,6 +5,9 @@ import {CharacterService} from '../services/character.service';
   selector: 'app-sheet',
   template: `
     <mat-grid-list cols="6" rowHeight="100px">
+      <mat-grid-tile [colspan]="6" [rowspan]="2">
+        <app-details-field></app-details-field>
+      </mat-grid-tile>
       <mat-grid-tile [colspan]="2" [rowspan]="3">
         <app-attributes-field></app-attributes-field>
       </mat-grid-tile>
