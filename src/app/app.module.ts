@@ -14,6 +14,9 @@ import { PolicyComponent } from './policy/policy.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MatTabsModule } from '@angular/material/tabs';
+import { FeatsAndAbilitiesComponent } from './feats-and-abilities/feats-and-abilities.component';
+import { SpellbookComponent } from './spellbook/spellbook.component';
+import { BackgroundComponent } from './background/background.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { MatTabsModule } from '@angular/material/tabs';
     ProfLevelComponent,
     SkillEntryComponent,
     PolicyComponent,
-    InventoryComponent
+    InventoryComponent,
+    FeatsAndAbilitiesComponent,
+    SpellbookComponent,
+    BackgroundComponent
   ],
   imports: [
     BrowserModule,

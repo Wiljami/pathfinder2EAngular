@@ -7,7 +7,10 @@ import { Component } from '@angular/core';
 
     <nav mat-tab-nav-bar>
       <a mat-tab-link routerLink="/main" routerLinkActive="active">Main page</a>
+      <a mat-tab-link routerLink="/background" routerLinkActive="active">Background</a>
+      <a mat-tab-link routerLink="/feats" routerLinkActive="active">Feats and Abilities</a>
       <a mat-tab-link routerLink="/inventory" routerLinkActive="active">Inventory</a>
+      <a mat-tab-link routerLink="/spells" routerLinkActive="active">Spells</a>
     </nav>
 
     <div>
