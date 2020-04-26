@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AbilityScore } from './AbilityScore';
 import {Skill} from './Skill';
+import {SavingThrow} from './SavingThrow';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,27 @@ export class CharacterService {
   int = new AbilityScore('Intelligence', 10);
   wis = new AbilityScore('Wisdom', 10);
   cha = new AbilityScore('Charisma', 10);
+
+  fortSave: SavingThrow = {
+    name: 'Fortitude',
+    prof: 2,
+    item: 0,
+    stat: this.con
+  };
+
+  refSave: SavingThrow = {
+    name: 'Reflex',
+    prof: 2,
+    item: 0,
+    stat: this.dex
+  };
+
+  willSave: SavingThrow = {
+    name: 'Will',
+    prof: 2,
+    item: 0,
+    stat: this.wis
+  };
 
   strSkill: Skill = {
     name: 'placeholder STR skill',

@@ -17,6 +17,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { FeatsAndAbilitiesComponent } from './feats-and-abilities/feats-and-abilities.component';
 import { SpellbookComponent } from './spellbook/spellbook.component';
 import { BackgroundComponent } from './background/background.component';
+import { SavesFieldComponent } from './sheet/saves-field/saves-field.component';
+import { SavingThrowComponent } from './sheet/saves-field/saving-throw/saving-throw.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { BackgroundComponent } from './background/background.component';
     InventoryComponent,
     FeatsAndAbilitiesComponent,
     SpellbookComponent,
-    BackgroundComponent
+    BackgroundComponent,
+    SavesFieldComponent,
+    SavingThrowComponent
   ],
   imports: [
     BrowserModule,
