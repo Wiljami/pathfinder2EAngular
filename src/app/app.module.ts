@@ -10,6 +10,7 @@ import { SkillsFieldComponent } from './sheet/skills-field/skills-field.componen
 import { ProfLevelComponent } from './sheet/prof-level/prof-level.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { SkillEntryComponent } from './sheet/skills-field/skill-entry/skill-entry.component';
+import { PolicyComponent } from './policy/policy.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SkillEntryComponent } from './sheet/skills-field/skill-entry/skill-entr
     SheetComponent,
     SkillsFieldComponent,
     ProfLevelComponent,
-    SkillEntryComponent
+    SkillEntryComponent,
+    PolicyComponent
   ],
   imports: [
     BrowserModule,
