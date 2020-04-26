@@ -4,13 +4,20 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { SheetComponent } from './sheet/sheet.component';
 import { CharacterService } from './services/character.service';
-import {ViewModule} from './sheet/sheet.module';
+import { ViewModule } from './sheet/sheet.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SkillsFieldComponent } from './sheet/skills-field/skills-field.component';
 import { ProfLevelComponent } from './sheet/prof-level/prof-level.component';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { SkillEntryComponent } from './sheet/skills-field/skill-entry/skill-entry.component';
 import { PolicyComponent } from './policy/policy.component';
+import { RouterModule, Routes } from '@angular/router';
+import { InventoryComponent } from './inventory/inventory.component';
+
+const appRoutes: Routes = [
+  { path: '', component: SheetComponent},
+  { path: 'inventory', component: InventoryComponent}
+];
 
 @NgModule({
   declarations: [
@@ -19,13 +26,15 @@ import { PolicyComponent } from './policy/policy.component';
     SkillsFieldComponent,
     ProfLevelComponent,
     SkillEntryComponent,
-    PolicyComponent
+    PolicyComponent,
+    InventoryComponent
   ],
   imports: [
     BrowserModule,
     ViewModule,
     BrowserAnimationsModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    RouterModule.forRoot(appRoutes, { enableTracing: true })
   ],
   providers: [CharacterService],
   bootstrap: [AppComponent]
