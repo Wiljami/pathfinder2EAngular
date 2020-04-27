@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {CharacterService} from '../services/character.service';
 
 @Component({
   selector: 'app-sheet',
@@ -29,7 +28,7 @@ import {CharacterService} from '../services/character.service';
 
 
 export class SheetComponent implements OnInit {
-  constructor(public character: CharacterService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
