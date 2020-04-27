@@ -11,7 +11,8 @@ import {Component, Input, OnInit} from '@angular/core';
       <mat-button-toggle value="6">M</mat-button-toggle>
       <mat-button-toggle value="8">L</mat-button-toggle>
     </mat-button-toggle-group>
-  `
+  `,
+  styles: []
 })
 export class ProfLevelComponent implements OnInit {
   @Input() value;
