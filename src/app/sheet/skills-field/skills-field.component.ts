@@ -4,7 +4,7 @@ import {CharacterService} from '../../services/character.service';
 @Component({
   selector: 'app-skills-field',
   template: `
-    <h1>skills field</h1>
+    <h1>Skills</h1>
     <app-skill-entry [skill]="character.strSkill"></app-skill-entry><br>
     <app-skill-entry [skill]="character.dexSkill"></app-skill-entry><br>
     <app-skill-entry [skill]="character.conSkill"></app-skill-entry><br>

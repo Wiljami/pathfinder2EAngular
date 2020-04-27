@@ -20,7 +20,7 @@ import {CharacterService} from '../services/character.service';
 
       <mat-grid-tile [colspan]="3" [rowspan]="2">
       </mat-grid-tile>
-      <mat-grid-tile [colspan]="3" [rowspan]="2">
+      <mat-grid-tile [colspan]="3" [rowspan]="5">
         <app-skills-field></app-skills-field>
       </mat-grid-tile>
     </mat-grid-list>
