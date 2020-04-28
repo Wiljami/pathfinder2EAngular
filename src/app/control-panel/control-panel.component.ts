@@ -7,7 +7,7 @@ import { CharacterService } from '../services/character.service';
     <button type="button" (click)="exportCharacter()">Export Character</button>
     <button type="button" (click)="fileInput.click()">
       <span>Import Character</span>
-      <input #fileInput type="file" (change)="importCharacter($event)" style="display:none;" />
+      <input #fileInput type="file" (change)="importCharacter($event)" accept=".chr" style="display:none;" />
     </button>
   `
 })
