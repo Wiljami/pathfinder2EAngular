@@ -20,7 +20,7 @@ export class ControlPanelComponent implements OnInit {
 
   exportCharacter() {
     const fileName = 'character';
-    const json = JSON.stringify(this.character);
+    const json = JSON.stringify(this.character.exportCharacter());
     const blob = new Blob([json], {type: 'application/json'});
     const href = URL.createObjectURL(blob);
     const link = document.createElement('a');
@@ -36,7 +36,7 @@ export class ControlPanelComponent implements OnInit {
     const fileReader = new FileReader();
     fileReader.onload = () => {
       const content = fileReader.result as string;
-      console.log(JSON.parse(content));
+      this.character.importCharacter(JSON.parse(content));
     };
 
     fileReader.onerror = (error) => {

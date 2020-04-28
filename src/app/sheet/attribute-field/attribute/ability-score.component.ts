@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {AfterViewChecked, Component, DoCheck, Input, OnChanges, OnInit} from '@angular/core';
 import { AbilityScore } from 'src/app/services/AbilityScore';
 
 @Component({
@@ -8,7 +8,7 @@ import { AbilityScore } from 'src/app/services/AbilityScore';
     <input type="number" matInput [(ngModel)]="value" (change)="change()">
   `
 })
-export class AbilityScoreComponent implements OnInit {
+export class AbilityScoreComponent implements OnInit, DoCheck {
   @Input() stat: AbilityScore;
   value;
 
@@ -20,5 +20,9 @@ export class AbilityScoreComponent implements OnInit {
 
   change() {
     this.stat.updateValue(this.value);
+  }
+
+  ngDoCheck(): void {
+    this.value = this.stat.value;
   }
 }
