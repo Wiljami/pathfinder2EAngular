@@ -38,41 +38,14 @@ export class CharacterService {
     stat: this.wis
   };
 
-  strSkill: Skill = {
-    name: 'placeholder STR skill',
-    stat: this.str,
-    prof: 2
-  };
-
-  dexSkill: Skill = {
-    name: 'placeholder DEX skill',
-    stat: this.dex,
-    prof: 4
-  };
-
-  conSkill: Skill = {
-    name: 'placeholder CON skill',
-    stat: this.con,
-    prof: 6
-  };
-
-  intSkill: Skill = {
-    name: 'placeholder INT skill',
-    stat: this.int,
-    prof: 8
-  };
-
-  wisSkill: Skill = {
-    name: 'placeholder WIS skill',
-    stat: this.wis,
-    prof: 2
-  };
-
-  chaSkill: Skill = {
-    name: 'placeholder CHA skill',
-    stat: this.cha,
-    prof: 4
-  };
+  skills: Skill[] = [
+    { name: 'placeholder STR skill', stat: this.str, prof: 2 },
+    { name: 'placeholder DEX skill', stat: this.dex, prof: 4 },
+    { name: 'placeholder CON skill', stat: this.con, prof: 6 },
+    { name: 'placeholder INT skill', stat: this.int, prof: 8 },
+    { name: 'placeholder WIS skill', stat: this.wis, prof: 2 },
+    { name: 'placeholder CHA skill', stat: this.cha, prof: 4 }
+  ];
 
   constructor() { }
 }
