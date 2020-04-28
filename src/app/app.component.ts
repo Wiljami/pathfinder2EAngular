@@ -5,6 +5,8 @@ import { Component } from '@angular/core';
   template: `
     <h1>Pathfinder 2e</h1>
 
+    <app-control-panel></app-control-panel>
+
     <nav mat-tab-nav-bar>
       <a mat-tab-link routerLink="/main" routerLinkActive="active">Main page</a>
       <a mat-tab-link routerLink="/background" routerLinkActive="active">Background</a>

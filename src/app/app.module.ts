@@ -15,6 +15,8 @@ import { FeatsAndAbilitiesComponent } from './feats-and-abilities/feats-and-abil
 import { SpellbookComponent } from './spellbook/spellbook.component';
 import { BackgroundComponent } from './background/background.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { ControlPanelComponent } from './control-panel/control-panel.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     InventoryComponent,
     FeatsAndAbilitiesComponent,
     SpellbookComponent,
-    BackgroundComponent
+    BackgroundComponent,
+    ControlPanelComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatButtonToggleModule,
     AppRoutingModule,
     MatTabsModule,
-    MatGridListModule
+    MatGridListModule,
+    MatFormFieldModule
   ],
   providers: [CharacterService],
   bootstrap: [AppComponent]
