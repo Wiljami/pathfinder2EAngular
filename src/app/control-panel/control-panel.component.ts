@@ -32,7 +32,6 @@ export class ControlPanelComponent implements OnInit {
   }
 
   importCharacter(event) {
-    console.log(event.target.files);
     const fileReader = new FileReader();
     fileReader.onload = () => {
       const content = fileReader.result as string;
