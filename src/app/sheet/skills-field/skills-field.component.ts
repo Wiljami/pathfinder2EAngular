@@ -15,7 +15,6 @@ export class SkillsFieldComponent implements OnInit {
   constructor(public character: CharacterService) { }
 
   ngOnInit(): void {
-    console.log(this.character.skills[0]);
   }
 
 }
