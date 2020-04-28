@@ -5,7 +5,7 @@ import { AbilityScore } from 'src/app/services/AbilityScore';
   selector: 'app-ability-score',
   template: `
     {{stat.modPrint}} MOD {{stat.name}} score:
-    <input type="number" matInput [(ngModel)]="value" (change)="change()">
+    <input type="number" matInput [(ngModel)]="value" [min]="1" [max]="99" (change)="change()">
   `
 })
 export class AbilityScoreComponent implements OnInit, DoCheck {
