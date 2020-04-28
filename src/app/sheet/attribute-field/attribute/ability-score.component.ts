@@ -1,4 +1,4 @@
-import {AfterViewChecked, Component, DoCheck, Input, OnChanges, OnInit} from '@angular/core';
+import { Component, DoCheck, Input, OnInit} from '@angular/core';
 import { AbilityScore } from 'src/app/services/AbilityScore';
 
 @Component({
