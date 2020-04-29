@@ -18,6 +18,11 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ImageFieldComponent } from './background/image-field/image-field.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { ImageDialogComponent } from './background/image-field/image-dialog/image-dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +34,8 @@ import { ImageFieldComponent } from './background/image-field/image-field.compon
     SpellbookComponent,
     BackgroundComponent,
     ControlPanelComponent,
-    ImageFieldComponent
+    ImageFieldComponent,
+    ImageDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +45,11 @@ import { ImageFieldComponent } from './background/image-field/image-field.compon
     AppRoutingModule,
     MatTabsModule,
     MatGridListModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatMenuModule,
+    MatDialogModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [CharacterService],
   bootstrap: [AppComponent]
