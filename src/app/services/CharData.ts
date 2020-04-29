@@ -1,5 +1,15 @@
 export interface CharData {
   name: string;
+  playerName: string;
+
+  class: string;
+  ancestry: string;
+  deity: string;
+  background: string;
+  alignment: string;
+  size: string;
+  traits: string;
+
   image: string;
   level: number;
 

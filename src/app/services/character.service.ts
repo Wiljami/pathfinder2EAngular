@@ -9,6 +9,14 @@ import {CharData, SkillData} from './CharData';
 })
 export class CharacterService {
   name = '';
+  class = '';
+  ancestry = '';
+  playerName = '';
+  deity = '';
+  background = '';
+  alignment = '';
+  size = '';
+  traits = '';
   level = 1;
   image = '';
 
@@ -59,8 +67,18 @@ export class CharacterService {
 
     const charData: CharData = {
       name: this.name,
-      level: this.level,
+      playerName: this.playerName,
+
+      class: this.class,
+      ancestry: this.ancestry,
+      deity: this.deity,
+      background: this.background,
+      alignment: this.alignment,
+      size: this.size,
+      traits: this.traits,
+
       image: this.image,
+      level: this.level,
 
       str: this.str.value,
       dex: this.dex.value,
@@ -81,8 +99,18 @@ export class CharacterService {
 
   importCharacter(charData: CharData) {
     this.name = charData.name;
-    this.level = charData.level;
+    this.playerName = charData.playerName;
+
+    this.class = charData.class;
+    this.ancestry = charData.ancestry;
+    this.deity = charData.deity;
+    this.background = charData.background;
+    this.alignment = charData.alignment;
+    this.size = charData.size;
+    this.traits = charData.traits;
+
     this.image = charData.image;
+    this.level = charData.level;
 
     this.skills = [];
     charData.skills.forEach((skillData) => {
