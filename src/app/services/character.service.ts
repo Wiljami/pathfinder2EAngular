@@ -58,6 +58,10 @@ export class CharacterService {
     });
 
     const charData: CharData = {
+      name: this.name,
+      level: this.level,
+      image: this.image,
+
       str: this.str.value,
       dex: this.dex.value,
       con: this.con.value,
@@ -76,6 +80,10 @@ export class CharacterService {
   }
 
   importCharacter(charData: CharData) {
+    this.name = charData.name;
+    this.level = charData.level;
+    this.image = charData.image;
+
     this.skills = [];
     charData.skills.forEach((skillData) => {
       const skill: Skill = {name: skillData.name, prof: skillData.prof, stat: null};
@@ -116,7 +124,5 @@ export class CharacterService {
     this.int.updateValue(charData.int);
     this.wis.updateValue(charData.wis);
     this.cha.updateValue(charData.cha);
-
-
   }
 }

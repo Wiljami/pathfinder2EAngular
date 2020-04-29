@@ -1,4 +1,8 @@
 export interface CharData {
+  name: string;
+  image: string;
+  level: number;
+
   str: number;
   dex: number;
   con: number;
