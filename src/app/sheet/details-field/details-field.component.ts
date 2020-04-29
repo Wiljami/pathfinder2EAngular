@@ -15,7 +15,7 @@ import {CharacterService} from '../../services/character.service';
         <mat-grid-tile colspan="4">
           <mat-form-field class="fullwidth">
             <mat-label>Class</mat-label>
-            <input matInput/>
+            <input type="text" [(ngModel)]="class" matInput (change)="changeClass($event)">
           </mat-form-field>
         </mat-grid-tile>
         <mat-grid-tile colspan="2">
@@ -27,43 +27,43 @@ import {CharacterService} from '../../services/character.service';
         <mat-grid-tile colspan="4">
           <mat-form-field class="fullwidth">
             <mat-label>Player name</mat-label>
-            <input matInput/>
+            <input type="text" [(ngModel)]="playerName" matInput [min]="1" [max]="20" (change)="changePlayerName($event)">
           </mat-form-field>
         </mat-grid-tile>
         <mat-grid-tile colspan="4">
           <mat-form-field class="fullwidth">
             <mat-label>Ancestry and heritage</mat-label>
-            <input matInput/>
+            <input type="text" [(ngModel)]="ancestry" matInput [min]="1" [max]="20" (change)="changeAncestry($event)">
           </mat-form-field>
         </mat-grid-tile>
         <mat-grid-tile colspan="1">
           <mat-form-field class="quarterwidth">
             <mat-label>Alignment</mat-label>
-            <input matInput/>
+            <input type="text" [(ngModel)]="alignment" matInput [min]="1" [max]="20" (change)="changeAlignment($event)">
           </mat-form-field>
         </mat-grid-tile>
         <mat-grid-tile colspan="1">
           <mat-form-field class="quarterwidth">
             <mat-label>Size</mat-label>
-            <input matInput/>
+            <input type="text" [(ngModel)]="size" matInput [min]="1" [max]="20" (change)="changeSize($event)">
           </mat-form-field>
         </mat-grid-tile>
         <mat-grid-tile colspan="4">
           <mat-form-field class="fullwidth">
             <mat-label>Deity</mat-label>
-            <input matInput/>
+            <input type="text" [(ngModel)]="deity" matInput [min]="1" [max]="20" (change)="changeDeity($event)">
           </mat-form-field>
         </mat-grid-tile>
         <mat-grid-tile colspan="4">
           <mat-form-field class="fullwidth">
             <mat-label>Background</mat-label>
-            <input matInput/>
+            <input type="text" [(ngModel)]="background" matInput [min]="1" [max]="20" (change)="changeBackground($event)">
           </mat-form-field>
         </mat-grid-tile>
         <mat-grid-tile colspan="2">
           <mat-form-field class="halfwidth">
             <mat-label>Traits</mat-label>
-            <input matInput/>
+            <input type="text" [(ngModel)]="traits" matInput [min]="1" [max]="20" (change)="changeTraits($event)">
           </mat-form-field>
         </mat-grid-tile>
       </mat-grid-list>
@@ -79,24 +79,80 @@ import {CharacterService} from '../../services/character.service';
 export class DetailsFieldComponent implements OnInit, DoCheck {
   level: number;
   name: string;
+  class: string;
+  playerName: string;
+  deity: string;
+  ancestry: string;
+  background: string;
+  alignment: string;
+  size: string;
+  traits: string;
 
   constructor(public character: CharacterService) { }
 
   ngOnInit(): void {
     this.level = this.character.level;
     this.name = this.character.name;
+    this.class = this.character.class;
+    this.playerName = this.character.playerName;
+    this.deity = this.character.deity;
+    this.ancestry = this.character.ancestry;
+    this.background = this.character.background;
+    this.alignment = this.character.alignment;
+    this.size = this.character.size;
+    this.traits = this.character.traits;
   }
 
   ngDoCheck(): void {
     this.level = this.character.level;
     this.name = this.character.name;
+    this.class = this.character.class;
+    this.playerName = this.character.playerName;
+    this.deity = this.character.deity;
+    this.ancestry = this.character.ancestry;
+    this.background = this.character.background;
+    this.alignment = this.character.alignment;
+    this.size = this.character.size;
+    this.traits = this.character.traits;
   }
 
   changeName(event) {
     this.character.name = event.target.value;
   }
 
+  changeClass(event) {
+    this.character.class = event.target.value;
+  }
+
   changeLevel(event) {
     this.character.level = event.target.value;
+  }
+
+  changePlayerName(event) {
+    this.character.playerName = event.target.value;
+  }
+
+  changeDeity(event) {
+    this.character.deity = event.target.value;
+  }
+
+  changeAncestry(event) {
+    this.character.ancestry = event.target.value;
+  }
+
+  changeBackground(event) {
+    this.character.background = event.target.value;
+  }
+
+  changeAlignment(event) {
+    this.character.alignment = event.target.value;
+  }
+
+  changeSize(event) {
+    this.character.size = event.target.value;
+  }
+
+  changeTraits(event) {
+    this.character.traits = event.target.value;
   }
 }
