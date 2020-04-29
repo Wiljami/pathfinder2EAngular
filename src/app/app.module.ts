@@ -17,6 +17,7 @@ import { BackgroundComponent } from './background/background.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { ImageFieldComponent } from './background/image-field/image-field.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     FeatsAndAbilitiesComponent,
     SpellbookComponent,
     BackgroundComponent,
-    ControlPanelComponent
+    ControlPanelComponent,
+    ImageFieldComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@ import {CharData, SkillData} from './CharData';
 export class CharacterService {
   name = '';
   level = 1;
+  image = '';
 
   str = new AbilityScore('Strength', 10);
   dex = new AbilityScore('Dexterity', 10);
