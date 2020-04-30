@@ -23,6 +23,8 @@ import { ImageDialogComponent } from './background/image-field/image-dialog/imag
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
+import { FeatComponent } from './feats-and-abilities/feat/feat.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import {FormsModule} from '@angular/forms';
     BackgroundComponent,
     ControlPanelComponent,
     ImageFieldComponent,
-    ImageDialogComponent
+    ImageDialogComponent,
+    FeatComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,8 @@ import {FormsModule} from '@angular/forms';
     MatMenuModule,
     MatDialogModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatExpansionModule
   ],
   providers: [CharacterService],
   bootstrap: [AppComponent]
