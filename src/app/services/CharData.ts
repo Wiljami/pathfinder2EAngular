@@ -1,3 +1,5 @@
+import {Skill} from './Skill';
+
 export interface CharData {
   name: string;
   playerName: string;
@@ -13,18 +15,18 @@ export interface CharData {
   image: string;
   level: number;
 
-  str: number;
-  dex: number;
-  con: number;
-  int: number;
-  wis: number;
-  cha: number;
+  strength: number;
+  dexterity: number;
+  constitution: number;
+  intelligence: number;
+  wisdom: number;
+  charisma: number;
 
   willSave: SaveData;
   fortSave: SaveData;
   refSave: SaveData;
 
-  skills: SkillData[];
+  skills: Skill[];
 }
 
 export interface SaveData {
