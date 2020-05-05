@@ -1,5 +1,6 @@
 Pathfinder 2e character sheet created using Angular for a school project.
 
+Currently deployd at https://wiljami-pathfinder2e.herokuapp.com/main
 
 Paizo Community Use Policy
 
