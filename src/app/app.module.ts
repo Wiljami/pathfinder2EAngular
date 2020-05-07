@@ -25,6 +25,7 @@ import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
 import { FeatComponent } from './feats-and-abilities/feat/feat.component';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { LogoFieldComponent } from './sheet/logo-field/logo-field.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     ControlPanelComponent,
     ImageFieldComponent,
     ImageDialogComponent,
-    FeatComponent
+    FeatComponent,
+    LogoFieldComponent
   ],
   imports: [
     BrowserModule,
