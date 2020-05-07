@@ -6,18 +6,22 @@ import {Feat} from '../../services/Feat';
   selector: 'app-feats-field',
   template: `
     <h2>{{title}}</h2>
-    <div cdkDropList (cdkDropListDropped)="drop($event)">
+    <button type="button" (click)="addFeat()">Add Feat</button>
+    <button type="button" (click)="lockSheet()">{{lockButtonText}}</button>
+
+    <div cdkDropListDisabled="{{listLocked}}" cdkDropList (cdkDropListDropped)="drop($event)">
       <div cdkDrag [cdkDragData]="feat" *ngFor="let feat of feats">
         <app-feat [feat]="feat"></app-feat>
       </div>
     </div>
-    <button type="button" (click)="addFeat()">Add Feat</button>
-
   `
 })
 export class FeatsFieldComponent implements OnInit {
   @Input() title;
   @Input() feats;
+
+  listLocked = true;
+  lockButtonText = 'Unlock list';
 
   constructor() { }
 
@@ -30,5 +34,14 @@ export class FeatsFieldComponent implements OnInit {
 
   addFeat() {
     this.feats.push({name : 'New Feat', description: '', type: ''});
+  }
+
+  lockSheet() {
+    if (this.listLocked) {
+      this.lockButtonText = 'Lock list';
+    } else {
+      this.lockButtonText = 'Unlock list';
+    }
+    this.listLocked = !this.listLocked;
   }
 }
