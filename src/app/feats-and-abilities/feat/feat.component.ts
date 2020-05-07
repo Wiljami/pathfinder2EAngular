@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Feat} from '../../services/Feat';
 
 @Component({
   selector: 'app-feat',
@@ -6,17 +7,17 @@ import { Component, OnInit } from '@angular/core';
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
-          <h3>Special 1st</h3>
+          <h3>{{feat.name}}</h3>
         </mat-panel-title>
       </mat-expansion-panel-header>
       <mat-form-field class="fullwidth">
-        <input matInput placeholder="Feat Name">
+        <input matInput placeholder="{{feat.name}}">
       </mat-form-field>
       <mat-form-field class="fullwidth">
-        <input matInput placeholder="Type">
+        <input matInput placeholder="{{feat.type}}">
       </mat-form-field>
       <mat-form-field class="fullwidth">
-        <textarea matInput placeholder="Description"></textarea>
+        <textarea matInput placeholder="{{feat.description}}"></textarea>
       </mat-form-field>
     </mat-expansion-panel>
   `,
@@ -27,6 +28,8 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class FeatComponent implements OnInit {
+  @Input() feat: Feat;
+
   constructor() { }
 
   ngOnInit(): void {

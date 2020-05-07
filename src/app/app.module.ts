@@ -26,6 +26,7 @@ import {FormsModule} from '@angular/forms';
 import { FeatComponent } from './feats-and-abilities/feat/feat.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { LogoFieldComponent } from './sheet/logo-field/logo-field.component';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { LogoFieldComponent } from './sheet/logo-field/logo-field.component';
     MatDialogModule,
     MatInputModule,
     FormsModule,
-    MatExpansionModule
+    MatExpansionModule,
+    DragDropModule
   ],
   providers: [CharacterService],
   bootstrap: [AppComponent]
