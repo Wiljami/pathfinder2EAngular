@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Feat} from '../../services/Feat';
+import {Feat} from '../../../services/Feat';
 
 @Component({
   selector: 'app-feat',

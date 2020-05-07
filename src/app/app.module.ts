@@ -23,10 +23,11 @@ import { ImageDialogComponent } from './background/image-field/image-dialog/imag
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
-import { FeatComponent } from './feats-and-abilities/feat/feat.component';
+import { FeatComponent } from './feats-and-abilities/feats-field/feat/feat.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { LogoFieldComponent } from './sheet/logo-field/logo-field.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import { FeatsFieldComponent } from './feats-and-abilities/feats-field/feats-field.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     ImageFieldComponent,
     ImageDialogComponent,
     FeatComponent,
-    LogoFieldComponent
+    LogoFieldComponent,
+    FeatsFieldComponent
   ],
   imports: [
     BrowserModule,
