@@ -5,16 +5,15 @@ import {Feat} from '../services/Feat';
 @Component({
   selector: 'app-feats-and-abilities',
   template: `
-    <h1>Feats and abilities</h1>
     <div class="row">
       <div class="column">
         <app-feats-field [title]="ancestryTitle"></app-feats-field>
-        <h2>Skill Feats</h2>
-        <h2>General Feats</h2>
+        <app-feats-field [title]="skillTitle"></app-feats-field>
+        <app-feats-field [title]="generalTitle"></app-feats-field>
       </div>
       <div class="column">
-        <h2>Class Feats and Abilities</h2>
-        <h2>Bonus Feats</h2>
+        <app-feats-field [title]="classTitle"></app-feats-field>
+        <app-feats-field [title]="bonusTitle"></app-feats-field>
       </div>
     </div>
   `,
@@ -24,7 +23,11 @@ import {Feat} from '../services/Feat';
   ]
 })
 export class FeatsAndAbilitiesComponent implements OnInit {
-  ancestryTitle = 'Ancestry Feats and Abilities'
+  ancestryTitle = 'Ancestry Feats and Abilities';
+  skillTitle = 'Skill Feats';
+  generalTitle = 'General Feats';
+  classTitle = 'Class Feats and Abilities';
+  bonusTitle = 'Bonus Feats';
 
   constructor() { }
 
