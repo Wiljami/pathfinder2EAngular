@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import {CharacterService} from '../services/character.service';
 
 @Component({
   selector: 'app-feats-and-abilities',
   template: `
     <div class="row">
       <div class="column">
-        <app-feats-field [title]="ancestryTitle"></app-feats-field>
-        <app-feats-field [title]="skillTitle"></app-feats-field>
-        <app-feats-field [title]="generalTitle"></app-feats-field>
+        <app-feats-field [title]="ancestryTitle" [feats]="character.ancestryFeats"></app-feats-field>
+        <app-feats-field [title]="skillTitle" [feats]="character.skillFeats"></app-feats-field>
+        <app-feats-field [title]="generalTitle" [feats]="character.generalFeats"></app-feats-field>
       </div>
       <div class="column">
-        <app-feats-field [title]="classTitle"></app-feats-field>
-        <app-feats-field [title]="bonusTitle"></app-feats-field>
+        <app-feats-field [title]="classTitle" [feats]="character.classFeats"></app-feats-field>
+        <app-feats-field [title]="bonusTitle" [feats]="character.bonusFeats"></app-feats-field>
       </div>
     </div>
   `,
@@ -27,7 +28,7 @@ export class FeatsAndAbilitiesComponent implements OnInit {
   classTitle = 'Class Feats and Abilities';
   bonusTitle = 'Bonus Feats';
 
-  constructor() { }
+  constructor(public character: CharacterService) { }
 
   ngOnInit(): void {
   }

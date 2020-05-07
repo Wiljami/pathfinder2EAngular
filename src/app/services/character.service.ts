@@ -59,23 +59,23 @@ export class CharacterService {
   ];
 
   ancestryFeats: Feat[] = [
-    { name: 'placeholder feat', type: 'placeholder type', description: 'placeholder description'}
+    { name: 'placeholder ancestry feat', type: 'placeholder type', description: 'placeholder description'}
   ];
 
   skillFeats: Feat[] = [
-    { name: 'placeholder feat', type: 'placeholder type', description: 'placeholder description'}
+    { name: 'placeholder skill feat', type: 'placeholder type', description: 'placeholder description'}
   ];
 
   generalFeats: Feat[] = [
-    { name: 'placeholder feat', type: 'placeholder type', description: 'placeholder description'}
+    { name: 'placeholder general feat', type: 'placeholder type', description: 'placeholder description'}
   ];
 
   classFeats: Feat[] = [
-    { name: 'placeholder feat', type: 'placeholder type', description: 'placeholder description'}
+    { name: 'placeholder class feat', type: 'placeholder type', description: 'placeholder description'}
   ];
 
   bonusFeats: Feat[] = [
-    { name: 'placeholder feat', type: 'placeholder type', description: 'placeholder description'}
+    { name: 'placeholder bonus feat', type: 'placeholder type', description: 'placeholder description'}
   ];
 
   constructor() { }

@@ -17,7 +17,7 @@ import {Feat} from '../../services/Feat';
 })
 export class FeatsFieldComponent implements OnInit {
   @Input() title;
-  feats: Feat[] = [{name : 'Example feat', description: 'hellurei', type: 'yarr'}];
+  @Input() feats;
 
   constructor() { }
 
