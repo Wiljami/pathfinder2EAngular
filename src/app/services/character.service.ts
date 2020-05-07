@@ -3,6 +3,7 @@ import { AbilityScore } from './AbilityScore';
 import {Skill} from './Skill';
 import {SavingThrow} from './SavingThrow';
 import {CharData, SkillData} from './CharData';
+import {Feat} from './Feat';
 
 @Injectable({
   providedIn: 'root'
@@ -57,6 +58,26 @@ export class CharacterService {
     { name: 'placeholder CHA skill', stat: this.cha, prof: 4 }
   ];
 
+  ancestryFeats: Feat[] = [
+    { name: 'placeholder feat', type: 'placeholder type', description: 'placeholder description'}
+  ];
+
+  skillFeats: Feat[] = [
+    { name: 'placeholder feat', type: 'placeholder type', description: 'placeholder description'}
+  ];
+
+  generalFeats: Feat[] = [
+    { name: 'placeholder feat', type: 'placeholder type', description: 'placeholder description'}
+  ];
+
+  classFeats: Feat[] = [
+    { name: 'placeholder feat', type: 'placeholder type', description: 'placeholder description'}
+  ];
+
+  bonusFeats: Feat[] = [
+    { name: 'placeholder feat', type: 'placeholder type', description: 'placeholder description'}
+  ];
+
   constructor() { }
 
   exportCharacter(): CharData {
@@ -91,7 +112,13 @@ export class CharacterService {
       fortSave: {prof: this.fortSave.prof, item: this.fortSave.item},
       refSave: {prof: this.refSave.prof, item: this.refSave.item},
 
-      skills
+      skills,
+
+      ancestryFeats: this.ancestryFeats,
+      skillFeats: this.skillFeats,
+      generalFeats: this.generalFeats,
+      classFeats: this.classFeats,
+      bonusFeats: this.bonusFeats
     };
 
     return charData;
@@ -145,6 +172,12 @@ export class CharacterService {
 
     this.refSave.prof = charData.refSave.prof;
     this.refSave.item = charData.refSave.item;
+
+    this.ancestryFeats = charData.ancestryFeats;
+    this.skillFeats = charData.skillFeats;
+    this.generalFeats = charData.generalFeats;
+    this.classFeats = charData.classFeats;
+    this.bonusFeats = charData.bonusFeats;
 
     this.str.updateValue(charData.str);
     this.dex.updateValue(charData.dex);

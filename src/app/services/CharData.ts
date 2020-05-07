@@ -1,3 +1,5 @@
+import {Feat} from './Feat';
+
 export interface CharData {
   name: string;
   playerName: string;
@@ -25,6 +27,12 @@ export interface CharData {
   refSave: SaveData;
 
   skills: SkillData[];
+
+  ancestryFeats: Feat[];
+  skillFeats: Feat[];
+  generalFeats: Feat[];
+  classFeats: Feat[];
+  bonusFeats: Feat[];
 }
 
 export interface SaveData {
