@@ -29,6 +29,6 @@ export class FeatsFieldComponent implements OnInit {
   }
 
   addFeat() {
-    this.feats.push({name : 'New Feat', description: 'Description', type: 'Type'});
+    this.feats.push({name : 'New Feat', description: '', type: ''});
   }
 }

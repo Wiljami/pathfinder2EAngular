@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, DoCheck, Input, OnInit} from '@angular/core';
 import {Feat} from '../../../services/Feat';
 
 @Component({
@@ -7,17 +7,20 @@ import {Feat} from '../../../services/Feat';
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
-          <h3>{{feat.name}}</h3>
+          <h3>{{name}}</h3>
         </mat-panel-title>
       </mat-expansion-panel-header>
       <mat-form-field class="fullwidth">
-        <input matInput placeholder="{{feat.name}}">
+        <mat-label>Name</mat-label>
+        <input type="text" [(ngModel)]="name" matInput [min]="1" [max]="20" (change)="changeName($event)">
       </mat-form-field>
       <mat-form-field class="fullwidth">
-        <input matInput placeholder="{{feat.type}}">
+        <mat-label>Type</mat-label>
+        <input type="text" [(ngModel)]="type" matInput [min]="1" [max]="20" (change)="changeType($event)">
       </mat-form-field>
       <mat-form-field class="fullwidth">
-        <textarea matInput placeholder="{{feat.description}}"></textarea>
+        <mat-label>Description</mat-label>
+        <input type="text" [(ngModel)]="description" matInput [min]="1" [max]="20" (change)="changeDescription($event)">
       </mat-form-field>
     </mat-expansion-panel>
   `,
@@ -27,11 +30,36 @@ import {Feat} from '../../../services/Feat';
     '.quarterwidth { width: 25%; min-width: 75px;}'
   ]
 })
-export class FeatComponent implements OnInit {
+export class FeatComponent implements OnInit, DoCheck {
   @Input() feat: Feat;
+
+  name: string;
+  type: string;
+  description: string;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.name = this.feat.name;
+    this.type = this.feat.type;
+    this.description = this.feat.description;
+  }
+
+  ngDoCheck(): void {
+    this.name = this.feat.name;
+    this.type = this.feat.type;
+    this.description = this.feat.description;
+  }
+
+  changeDescription(event) {
+    this.feat.description = event.target.value;
+  }
+
+  changeName(event) {
+    this.feat.name = event.target.value;
+  }
+
+  changeType(event) {
+    this.feat.type = event.target.value;
   }
 }
