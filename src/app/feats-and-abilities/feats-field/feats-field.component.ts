@@ -37,11 +37,7 @@ export class FeatsFieldComponent implements OnInit {
   }
 
   lockSheet() {
-    if (this.listLocked) {
-      this.lockButtonText = 'Lock list';
-    } else {
-      this.lockButtonText = 'Unlock list';
-    }
+    this.lockButtonText = this.listLocked ? 'Lock list' : 'Unlock list';
     this.listLocked = !this.listLocked;
   }
 }
