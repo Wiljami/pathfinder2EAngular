@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
-import {Feat} from '../services/Feat';
 
 @Component({
   selector: 'app-feats-and-abilities',
