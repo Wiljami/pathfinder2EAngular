@@ -28,6 +28,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { LogoFieldComponent } from './sheet/logo-field/logo-field.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { FeatsFieldComponent } from './feats-and-abilities/feats-field/feats-field.component';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { FeatsFieldComponent } from './feats-and-abilities/feats-field/feats-fie
     MatInputModule,
     FormsModule,
     MatExpansionModule,
-    DragDropModule
+    DragDropModule,
+    MatButtonModule
   ],
   providers: [CharacterService],
   bootstrap: [AppComponent]

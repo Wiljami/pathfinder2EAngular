@@ -9,7 +9,7 @@ import {Feat} from '../../../services/Feat';
         <mat-panel-title>
           <h3>{{name}}</h3>
           <div *ngIf="!locked" class="removebutton">
-            <button (click)="removeMe()">Remove</button>
+            <button mat-raised-button color="warn" (click)="removeMe()">Remove</button>
           </div>
         </mat-panel-title>
       </mat-expansion-panel-header>
