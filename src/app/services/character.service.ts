@@ -21,6 +21,21 @@ export class CharacterService {
   level = 1;
   image = '';
 
+  ethnicity = '';
+  nationality = '';
+  birthplace = '';
+  age = '';
+  gender = '';
+  height = '';
+  weight = '';
+  appearance = '';
+
+  attitude = '';
+  beliefs = '';
+  likes = '';
+  dislikes = '';
+  catchphrases = '';
+
   str = new AbilityScore('Strength', 10);
   dex = new AbilityScore('Dexterity', 10);
   con = new AbilityScore('Constitution', 10);
@@ -108,6 +123,15 @@ export class CharacterService {
       wis: this.wis.value,
       cha: this.cha.value,
 
+      ethnicity: this.ethnicity,
+      nationality: this.nationality,
+      birthplace: this.birthplace,
+      age: this.age,
+      gender: this.gender,
+      height: this.height,
+      weight: this.weight,
+      appearance: this.appearance,
+
       willSave: {prof: this.willSave.prof, item: this.willSave.item},
       fortSave: {prof: this.fortSave.prof, item: this.fortSave.item},
       refSave: {prof: this.refSave.prof, item: this.refSave.item},
@@ -135,6 +159,15 @@ export class CharacterService {
     this.alignment = charData.alignment;
     this.size = charData.size;
     this.traits = charData.traits;
+
+    this.ethnicity = charData.ethnicity;
+    this.nationality = charData.nationality;
+    this.birthplace = charData.birthplace;
+    this.age = charData.age;
+    this.gender = charData.gender;
+    this.height = charData.height;
+    this.weight = charData.weight;
+    this.appearance = charData.appearance;
 
     this.image = charData.image;
     this.level = charData.level;

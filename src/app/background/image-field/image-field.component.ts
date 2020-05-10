@@ -6,7 +6,6 @@ import {ImageDialogComponent} from './image-dialog/image-dialog.component';
 @Component({
   selector: 'app-image-field',
   template: `
-    <h2>Image field</h2>
     <div class="centerImage">
       <img class="charImage" [matMenuTriggerFor]="menu" src="{{character.image}}" alt="Click to add Character Image">
     </div>
@@ -16,7 +15,7 @@ import {ImageDialogComponent} from './image-dialog/image-dialog.component';
     </mat-menu>
   `,
   styles: [
-    '.charImage { max-width: 350px; max-height: 350px; cursor: pointer}',
+    '.charImage { max-width: 400px; max-height: 400px; cursor: pointer}',
     '.centerImage { text-align: center}'
   ]
 })
@@ -28,7 +27,7 @@ export class ImageFieldComponent implements OnInit {
 
   addImage() {
     const dialogRef = this.dialog.open(ImageDialogComponent, {
-      width: '350px',
+      width: '400px',
       data: {image: this.character.image}
     });
 

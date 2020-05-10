@@ -29,6 +29,7 @@ import { LogoFieldComponent } from './sheet/logo-field/logo-field.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { FeatsFieldComponent } from './feats-and-abilities/feats-field/feats-field.component';
 import {MatButtonModule} from '@angular/material/button';
+import { CharacterDetailsFieldComponent } from './background/character-details-field/character-details-field.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import {MatButtonModule} from '@angular/material/button';
     ImageDialogComponent,
     FeatComponent,
     LogoFieldComponent,
-    FeatsFieldComponent
+    FeatsFieldComponent,
+    CharacterDetailsFieldComponent
   ],
   imports: [
     BrowserModule,

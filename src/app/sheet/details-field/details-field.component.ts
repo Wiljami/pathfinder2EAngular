@@ -91,19 +91,14 @@ export class DetailsFieldComponent implements OnInit, DoCheck {
   constructor(public character: CharacterService) { }
 
   ngOnInit(): void {
-    this.level = this.character.level;
-    this.name = this.character.name;
-    this.class = this.character.class;
-    this.playerName = this.character.playerName;
-    this.deity = this.character.deity;
-    this.ancestry = this.character.ancestry;
-    this.background = this.character.background;
-    this.alignment = this.character.alignment;
-    this.size = this.character.size;
-    this.traits = this.character.traits;
+    this.updateValues();
   }
 
   ngDoCheck(): void {
+    this.updateValues();
+  }
+
+  updateValues = () =>  {
     this.level = this.character.level;
     this.name = this.character.name;
     this.class = this.character.class;

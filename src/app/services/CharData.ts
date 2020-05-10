@@ -12,6 +12,15 @@ export interface CharData {
   size: string;
   traits: string;
 
+  ethnicity: string;
+  nationality: string;
+  birthplace: string;
+  age: string;
+  gender: string;
+  height: string;
+  weight: string;
+  appearance: string;
+
   image: string;
   level: number;
 

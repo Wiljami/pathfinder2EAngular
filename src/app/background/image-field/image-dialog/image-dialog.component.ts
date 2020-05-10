@@ -7,7 +7,7 @@ import {DialogData} from './DialogData';
   template: `
     <h1 mat-dialog-title>Character Image</h1>
     <div mat-dialog-content>
-      <p>For best result use 350px by 350px image.</p>
+      <p>For best result use 400px by 400px image.</p>
       <mat-form-field class="fullwidth">
         <mat-label>Character Image Url</mat-label>
         <input matInput [(ngModel)]="data.image">
