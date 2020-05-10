@@ -8,6 +8,9 @@ import {Feat} from '../../../services/Feat';
       <mat-expansion-panel-header>
         <mat-panel-title>
           <h3>{{name}}</h3>
+          <div *ngIf="!locked" class="removebutton">
+            <button (click)="removeMe()">Remove</button>
+          </div>
         </mat-panel-title>
       </mat-expansion-panel-header>
       <mat-form-field class="fullwidth">
@@ -27,11 +30,14 @@ import {Feat} from '../../../services/Feat';
   styles: [
     '.fullwidth { width: 100%; min-width: 300px;}',
     '.halfwidth { width: 50%; min-width: 150px;}',
-    '.quarterwidth { width: 25%; min-width: 75px;}'
+    '.quarterwidth { width: 25%; min-width: 75px;}',
+    '.removebutton { display: block; margin-left: auto; margin-right: 0;}'
   ]
 })
 export class FeatComponent implements OnInit, DoCheck {
   @Input() feat: Feat;
+  @Input() callBack;
+  @Input() locked: boolean;
 
   name: string;
   type: string;
@@ -61,5 +67,9 @@ export class FeatComponent implements OnInit, DoCheck {
 
   changeType(event) {
     this.feat.type = event.target.value;
+  }
+
+  removeMe() {
+    this.callBack(this.feat);
   }
 }

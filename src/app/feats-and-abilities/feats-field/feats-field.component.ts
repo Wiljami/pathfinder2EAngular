@@ -11,14 +11,14 @@ import {Feat} from '../../services/Feat';
 
     <div cdkDropListDisabled="{{listLocked}}" cdkDropList (cdkDropListDropped)="drop($event)">
       <div cdkDrag [cdkDragData]="feat" *ngFor="let feat of feats">
-        <app-feat [feat]="feat"></app-feat>
+        <app-feat [feat]="feat" [callBack]="removeFeat" [locked]="listLocked"></app-feat>
       </div>
     </div>
   `
 })
 export class FeatsFieldComponent implements OnInit {
-  @Input() title;
-  @Input() feats;
+  @Input() title: string;
+  @Input() feats: Feat[];
 
   listLocked = true;
   lockButtonText = 'Unlock list';
@@ -39,5 +39,10 @@ export class FeatsFieldComponent implements OnInit {
   lockSheet() {
     this.lockButtonText = this.listLocked ? 'Lock list' : 'Unlock list';
     this.listLocked = !this.listLocked;
+  }
+
+  removeFeat = (feat) => {
+    const index = this.feats.indexOf(feat);
+    this.feats.splice(index, 1);
   }
 }
