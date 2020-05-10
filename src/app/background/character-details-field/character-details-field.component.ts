@@ -55,10 +55,17 @@ import {CharacterService} from '../../services/character.service';
         </mat-form-field>
       </mat-grid-tile>
 
-      <mat-grid-tile colspan="11">
+      <mat-grid-tile colspan="11" rowspan="1">
         <mat-form-field class="fullwidth">
           <mat-label>Appearance</mat-label>
-          <textarea type="text" [(ngModel)]="appearance" matInput (change)="changeAppearance($event)"></textarea>
+          <textarea matInput
+                    [(ngModel)]="appearance"
+                    cdkTextareaAutosize
+                    #autosize="cdkTextareaAutosize"
+                    cdkAutosizeMinRows="3"
+                    cdkAutosizeMaxRows="3"
+                    (change)="changeAppearance($event)">
+        </textarea>
         </mat-form-field>
       </mat-grid-tile>
     </mat-grid-list>
