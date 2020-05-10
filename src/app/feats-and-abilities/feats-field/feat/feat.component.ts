@@ -23,7 +23,14 @@ import {Feat} from '../../../services/Feat';
       </mat-form-field>
       <mat-form-field class="fullwidth">
         <mat-label>Description</mat-label>
-        <input type="text" [(ngModel)]="description" matInput [min]="1" [max]="20" (change)="changeDescription($event)">
+        <textarea matInput
+                  [(ngModel)]="description"
+                  cdkTextareaAutosize
+                  #autosize="cdkTextareaAutosize"
+                  cdkAutosizeMinRows="1"
+                  cdkAutosizeMaxRows="10"
+                  (change)="changeDescription($event)">
+        </textarea>
       </mat-form-field>
     </mat-expansion-panel>
   `,
