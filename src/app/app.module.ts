@@ -31,6 +31,7 @@ import { FeatsFieldComponent } from './feats-and-abilities/feats-field/feats-fie
 import {MatButtonModule} from '@angular/material/button';
 import { CharacterDetailsFieldComponent } from './background/character-details-field/character-details-field.component';
 import { CampaignNotesFieldComponent } from './background/campaign-notes-field/campaign-notes-field.component';
+import { CharacterPersonalityFieldComponent } from './background/character-personality-field/character-personality-field.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { CampaignNotesFieldComponent } from './background/campaign-notes-field/c
     LogoFieldComponent,
     FeatsFieldComponent,
     CharacterDetailsFieldComponent,
-    CampaignNotesFieldComponent
+    CampaignNotesFieldComponent,
+    CharacterPersonalityFieldComponent
   ],
   imports: [
     BrowserModule,

@@ -4,72 +4,72 @@ import {CharacterService} from '../../services/character.service';
 @Component({
   selector: 'app-character-details-field',
   template: `
-  <div class="tablewidth">
-    <mat-grid-list cols="11" rowHeight="100px">
-      <mat-grid-tile colspan="2">
-        <mat-form-field class="halfwidth">
-          <mat-label>Ethnicity</mat-label>
-          <input type="text" [(ngModel)]="ethnicity" matInput (change)="changeEthnicity($event)">
-        </mat-form-field>
-      </mat-grid-tile>
+    <div class="tablewidth">
+      <mat-grid-list cols="11" rowHeight="100px">
+        <mat-grid-tile colspan="2">
+          <mat-form-field class="halfwidth">
+            <mat-label>Ethnicity</mat-label>
+            <input type="text" [(ngModel)]="ethnicity" matInput (change)="changeEthnicity($event)">
+          </mat-form-field>
+        </mat-grid-tile>
 
-      <mat-grid-tile colspan="2">
-        <mat-form-field class="halfwidth">
-          <mat-label>Nationality</mat-label>
-          <input type="text" [(ngModel)]="nationality" matInput (change)="changeNationality($event)">
-        </mat-form-field>
-      </mat-grid-tile>
+        <mat-grid-tile colspan="2">
+          <mat-form-field class="halfwidth">
+            <mat-label>Nationality</mat-label>
+            <input type="text" [(ngModel)]="nationality" matInput (change)="changeNationality($event)">
+          </mat-form-field>
+        </mat-grid-tile>
 
-      <mat-grid-tile colspan="2">
-        <mat-form-field class="halfwidth">
-          <mat-label>Birthplace</mat-label>
-          <input type="text" [(ngModel)]="birthplace" matInput (change)="changeBirthplace($event)">
-        </mat-form-field>
-      </mat-grid-tile>
+        <mat-grid-tile colspan="2">
+          <mat-form-field class="halfwidth">
+            <mat-label>Birthplace</mat-label>
+            <input type="text" [(ngModel)]="birthplace" matInput (change)="changeBirthplace($event)">
+          </mat-form-field>
+        </mat-grid-tile>
 
-      <mat-grid-tile colspan="1">
-        <mat-form-field class="quarterwidth">
-          <mat-label>Age</mat-label>
-          <input type="text" [(ngModel)]="age" matInput (change)="changeAge($event)">
-        </mat-form-field>
-      </mat-grid-tile>
+        <mat-grid-tile colspan="1">
+          <mat-form-field class="quarterwidth">
+            <mat-label>Age</mat-label>
+            <input type="text" [(ngModel)]="age" matInput (change)="changeAge($event)">
+          </mat-form-field>
+        </mat-grid-tile>
 
-      <mat-grid-tile colspan="2">
-        <mat-form-field class="halfwidth">
-          <mat-label>Gender</mat-label>
-          <input type="text" [(ngModel)]="gender" matInput (change)="changeGender($event)">
-        </mat-form-field>
-      </mat-grid-tile>
+        <mat-grid-tile colspan="2">
+          <mat-form-field class="halfwidth">
+            <mat-label>Gender</mat-label>
+            <input type="text" [(ngModel)]="gender" matInput (change)="changeGender($event)">
+          </mat-form-field>
+        </mat-grid-tile>
 
-      <mat-grid-tile colspan="1">
-        <mat-form-field class="quarterwidth">
-          <mat-label>Height</mat-label>
-          <input type="text" [(ngModel)]="height" matInput (change)="changeHeight($event)">
-        </mat-form-field>
-      </mat-grid-tile>
+        <mat-grid-tile colspan="1">
+          <mat-form-field class="quarterwidth">
+            <mat-label>Height</mat-label>
+            <input type="text" [(ngModel)]="height" matInput (change)="changeHeight($event)">
+          </mat-form-field>
+        </mat-grid-tile>
 
-      <mat-grid-tile colspan="1">
-        <mat-form-field class="quarterwidth">
-          <mat-label>Weight</mat-label>
-          <input type="text" [(ngModel)]="weight" matInput (change)="changeWeight($event)">
-        </mat-form-field>
-      </mat-grid-tile>
+        <mat-grid-tile colspan="1">
+          <mat-form-field class="quarterwidth">
+            <mat-label>Weight</mat-label>
+            <input type="text" [(ngModel)]="weight" matInput (change)="changeWeight($event)">
+          </mat-form-field>
+        </mat-grid-tile>
 
-      <mat-grid-tile colspan="11" rowspan="1">
-        <mat-form-field class="fullwidth">
-          <mat-label>Appearance</mat-label>
-          <textarea matInput
-                    [(ngModel)]="appearance"
-                    cdkTextareaAutosize
-                    #autosize="cdkTextareaAutosize"
-                    cdkAutosizeMinRows="3"
-                    cdkAutosizeMaxRows="3"
-                    (change)="changeAppearance($event)">
-        </textarea>
-        </mat-form-field>
-      </mat-grid-tile>
-    </mat-grid-list>
-  </div>
+        <mat-grid-tile colspan="11" rowspan="1">
+          <mat-form-field class="fullwidth">
+            <mat-label>Appearance</mat-label>
+            <textarea matInput
+                      [(ngModel)]="appearance"
+                      cdkTextareaAutosize
+                      #autosize="cdkTextareaAutosize"
+                      cdkAutosizeMinRows="3"
+                      cdkAutosizeMaxRows="3"
+                      (change)="changeAppearance($event)">
+            </textarea>
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
   `,
   styles: [
     '.tablewidth { min-width: 800px; width: 100%}',
@@ -87,12 +87,6 @@ export class CharacterDetailsFieldComponent implements OnInit, DoCheck {
   height: string;
   weight: string;
   appearance: string;
-
-  attitude: string;
-  beliefs: string;
-  likes: string;
-  dislikes: string;
-  catchphrases: string;
 
   constructor(public character: CharacterService) { }
 
