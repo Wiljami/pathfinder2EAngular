@@ -127,6 +127,12 @@ export class CharacterService {
       weight: this.weight,
       appearance: this.appearance,
 
+      attitude: this.attitude,
+      beliefs: this.beliefs,
+      likes: this.likes,
+      dislikes: this.dislikes,
+      catchphrases: this.catchphrases,
+
       campaignNotes: this.campaignNotes,
       allies: this.allies,
       enemies: this.enemies,
@@ -178,6 +184,12 @@ export class CharacterService {
     this.height = charData.height;
     this.weight = charData.weight;
     this.appearance = charData.appearance;
+
+    this.attitude = charData.attitude;
+    this.beliefs = charData.beliefs;
+    this.likes = charData.likes;
+    this.dislikes = charData.dislikes;
+    this.catchphrases = charData.catchphrases;
 
     this.campaignNotes = charData.campaignNotes;
     this.allies = charData.allies;

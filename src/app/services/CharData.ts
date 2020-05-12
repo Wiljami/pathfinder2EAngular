@@ -21,6 +21,12 @@ export interface CharData {
   weight: string;
   appearance: string;
 
+  attitude: string;
+  beliefs: string;
+  likes: string;
+  dislikes: string;
+  catchphrases: string;
+
   campaignNotes: string;
   allies: string;
   enemies: string;
