@@ -1,4 +1,5 @@
 import {Component, DoCheck, OnInit} from '@angular/core';
+import {CharacterService} from '../../services/character.service';
 
 @Component({
   selector: 'app-campaign-notes-field',
@@ -63,12 +64,12 @@ import {Component, DoCheck, OnInit} from '@angular/core';
   ]
 })
 export class CampaignNotesFieldComponent implements OnInit, DoCheck {
-  campaignNotes = 'hellurei';
-  allies = 'allies';
-  enemies = 'enemies';
-  organizations = 'orgs';
+  campaignNotes: string;
+  allies: string;
+  enemies: string;
+  organizations: string;
 
-  constructor() { }
+  constructor(public character: CharacterService) { }
 
   ngOnInit(): void {
     this.updateValues();
@@ -79,25 +80,25 @@ export class CampaignNotesFieldComponent implements OnInit, DoCheck {
   }
 
   updateValues = () => {
-    this.campaignNotes = this.campaignNotes;
-    this.allies = this.allies;
-    this.enemies = this.enemies;
-    this.organizations = this.organizations;
+    this.campaignNotes = this.character.campaignNotes;
+    this.allies = this.character.allies;
+    this.enemies = this.character.enemies;
+    this.organizations = this.character.organizations;
   }
 
   changeCampaignNotes(event) {
-    this.campaignNotes = event.target.value;
+    this.character.campaignNotes = event.target.value;
   }
 
   changeAllies(event) {
-    this.allies = event.target.value;
+    this.character.allies = event.target.value;
   }
 
   changeEnemies(event) {
-    this.enemies = event.target.value;
+    this.character.enemies = event.target.value;
   }
 
   changeOrganizations(event) {
-    this.organizations = event.target.value;
+    this.character.organizations = event.target.value;
   }
 }

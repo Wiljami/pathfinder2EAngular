@@ -21,6 +21,11 @@ export interface CharData {
   weight: string;
   appearance: string;
 
+  campaignNotes: string;
+  allies: string;
+  enemies: string;
+  organizations: string;
+
   image: string;
   level: number;
 

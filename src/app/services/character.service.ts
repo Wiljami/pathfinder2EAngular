@@ -36,6 +36,11 @@ export class CharacterService {
   dislikes = '';
   catchphrases = '';
 
+  campaignNotes = '';
+  allies = '';
+  enemies = '';
+  organizations = '';
+
   str = new AbilityScore('Strength', 10);
   dex = new AbilityScore('Dexterity', 10);
   con = new AbilityScore('Constitution', 10);
@@ -113,6 +118,20 @@ export class CharacterService {
       size: this.size,
       traits: this.traits,
 
+      ethnicity: this.ethnicity,
+      nationality: this.nationality,
+      birthplace: this.birthplace,
+      age: this.age,
+      gender: this.gender,
+      height: this.height,
+      weight: this.weight,
+      appearance: this.appearance,
+
+      campaignNotes: this.campaignNotes,
+      allies: this.allies,
+      enemies: this.enemies,
+      organizations: this.organizations,
+
       image: this.image,
       level: this.level,
 
@@ -122,15 +141,6 @@ export class CharacterService {
       int: this.int.value,
       wis: this.wis.value,
       cha: this.cha.value,
-
-      ethnicity: this.ethnicity,
-      nationality: this.nationality,
-      birthplace: this.birthplace,
-      age: this.age,
-      gender: this.gender,
-      height: this.height,
-      weight: this.weight,
-      appearance: this.appearance,
 
       willSave: {prof: this.willSave.prof, item: this.willSave.item},
       fortSave: {prof: this.fortSave.prof, item: this.fortSave.item},
@@ -168,6 +178,11 @@ export class CharacterService {
     this.height = charData.height;
     this.weight = charData.weight;
     this.appearance = charData.appearance;
+
+    this.campaignNotes = charData.campaignNotes;
+    this.allies = charData.allies;
+    this.enemies = charData.enemies;
+    this.organizations = charData.organizations;
 
     this.image = charData.image;
     this.level = charData.level;
