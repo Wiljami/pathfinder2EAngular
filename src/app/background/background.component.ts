@@ -12,6 +12,7 @@ import { Component, OnInit } from '@angular/core';
         <app-character-details-field></app-character-details-field>
       </mat-grid-tile>
     </mat-grid-list>
+    <app-campaign-notes-field></app-campaign-notes-field>
   `
 })
 export class BackgroundComponent implements OnInit {

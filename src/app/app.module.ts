@@ -30,6 +30,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
 import { FeatsFieldComponent } from './feats-and-abilities/feats-field/feats-field.component';
 import {MatButtonModule} from '@angular/material/button';
 import { CharacterDetailsFieldComponent } from './background/character-details-field/character-details-field.component';
+import { CampaignNotesFieldComponent } from './background/campaign-notes-field/campaign-notes-field.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { CharacterDetailsFieldComponent } from './background/character-details-f
     FeatComponent,
     LogoFieldComponent,
     FeatsFieldComponent,
-    CharacterDetailsFieldComponent
+    CharacterDetailsFieldComponent,
+    CampaignNotesFieldComponent
   ],
   imports: [
     BrowserModule,
