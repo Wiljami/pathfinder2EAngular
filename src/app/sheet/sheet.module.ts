@@ -26,7 +26,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     AttributesFieldComponent,
     SavesFieldComponent,
     SkillsFieldComponent,
-    DetailsFieldComponent
+    DetailsFieldComponent,
+    ProfLevelComponent
   ],
   declarations: [
     AbilityScoreComponent,

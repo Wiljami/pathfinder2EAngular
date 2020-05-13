@@ -69,6 +69,11 @@ export class CharacterService {
     stat: this.wis
   };
 
+  spellAttackProf = 4;
+  spellAttackStat = this.int;
+  spellDCProf = 2;
+  spellDCStat = this.int;
+
   skills: Skill[] = [
     { name: 'placeholder STR skill', stat: this.str, prof: 2 },
     { name: 'placeholder DEX skill', stat: this.dex, prof: 4 },
@@ -152,6 +157,11 @@ export class CharacterService {
       fortSave: {prof: this.fortSave.prof, item: this.fortSave.item},
       refSave: {prof: this.refSave.prof, item: this.refSave.item},
 
+      spellAttackProf: this.spellAttackProf,
+      spellAttackStat: this.spellAttackStat.name,
+      spellDCProf: this.spellDCProf,
+      spellDCStat: this.spellDCStat.name,
+
       skills,
 
       ancestryFeats: this.ancestryFeats,
@@ -202,28 +212,15 @@ export class CharacterService {
     this.skills = [];
     charData.skills.forEach((skillData) => {
       const skill: Skill = {name: skillData.name, prof: skillData.prof, stat: null};
-      switch (skillData.stat) {
-        case this.str.name:
-          skill.stat = this.str;
-          break;
-        case this.dex.name:
-          skill.stat = this.dex;
-          break;
-        case this.con.name:
-          skill.stat = this.con;
-          break;
-        case this.int.name:
-          skill.stat = this.int;
-          break;
-        case this.wis.name:
-          skill.stat = this.wis;
-          break;
-        case this.cha.name:
-          skill.stat = this.cha;
-          break;
-      }
+      skill.stat = this.parseStatName(skillData.stat);
       this.skills.push(skill);
     });
+
+    this.spellAttackProf = charData.spellAttackProf;
+    this.spellAttackStat = this.parseStatName(charData.spellAttackStat);
+    this.spellDCProf = charData.spellDCProf;
+    this.spellDCStat = this.parseStatName(charData.spellDCStat);
+
     this.willSave.prof = charData.willSave.prof;
     this.willSave.item = charData.willSave.item;
 
@@ -245,5 +242,23 @@ export class CharacterService {
     this.int.updateValue(charData.int);
     this.wis.updateValue(charData.wis);
     this.cha.updateValue(charData.cha);
+  }
+
+  parseStatName(statName: string) {
+    switch (statName) {
+      case this.str.name:
+        return this.str;
+      case this.dex.name:
+        return this.dex;
+      case this.con.name:
+        return this.con;
+      case this.int.name:
+        return this.int;
+      case this.wis.name:
+        return this.wis;
+      case this.cha.name:
+        return this.cha;
+    }
+    return null;
   }
 }

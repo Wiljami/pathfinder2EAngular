@@ -1,15 +1,38 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, DoCheck, OnInit} from '@angular/core';
+import {CharacterService} from '../../services/character.service';
 
 @Component({
   selector: 'app-spell-attack-field',
-  templateUrl: './spell-attack-field.component.html',
-  styleUrls: ['./spell-attack-field.component.css']
-})
-export class SpellAttackFieldComponent implements OnInit {
+  template: `
+    <h3>Spell attack roll</h3>
+    total: {{character.spellAttackStat.mod + profValue}} =
+    key: {{character.spellAttackStat.mod}}
+    prof: {{profValue}}
+    <app-prof-level [value]="character.spellAttackProf" [callback]="updateProf"></app-prof-level>
+  `})
+export class SpellAttackFieldComponent implements OnInit, DoCheck {
+  profValue: number;
 
-  constructor() { }
+  constructor(public character: CharacterService) { }
 
   ngOnInit(): void {
+    this.updateProfValue();
   }
 
+  ngDoCheck(): void {
+    this.updateProfValue();
+  }
+
+  updateProfValue = () => {
+    if (this.character.spellAttackProf === 0) {
+      this.profValue = 0;
+    } else {
+      this.profValue = this.character.spellAttackProf + Number(this.character.level);
+    }
+  }
+
+  updateProf = (newValue) => {
+    this.character.spellAttackProf = Number(newValue);
+    this.updateProfValue();
+  }
 }

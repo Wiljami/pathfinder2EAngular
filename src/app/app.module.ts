@@ -33,9 +33,10 @@ import { CharacterDetailsFieldComponent } from './background/character-details-f
 import { CampaignNotesFieldComponent } from './background/campaign-notes-field/campaign-notes-field.component';
 import { CharacterPersonalityFieldComponent } from './background/character-personality-field/character-personality-field.component';
 import { SpellAttackFieldComponent } from './spellbook/spell-attack-field/spell-attack-field.component';
-import { SpellDcFieldComponent } from './spellbook/spell-dc-field/spell-dc-field.component';
+import { SpellDCFieldComponent } from './spellbook/spell-dc-field/spell-dc-field.component';
 import { SpellTraditionFieldComponent } from './spellbook/spell-tradition-field/spell-tradition-field.component';
 import { SpellsPerDayFieldComponent } from './spellbook/spells-per-day-field/spells-per-day-field.component';
+import {MatOptionModule} from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,7 @@ import { SpellsPerDayFieldComponent } from './spellbook/spells-per-day-field/spe
     CampaignNotesFieldComponent,
     CharacterPersonalityFieldComponent,
     SpellAttackFieldComponent,
-    SpellDcFieldComponent,
+    SpellDCFieldComponent,
     SpellTraditionFieldComponent,
     SpellsPerDayFieldComponent,
   ],
@@ -75,7 +76,8 @@ import { SpellsPerDayFieldComponent } from './spellbook/spells-per-day-field/spe
     FormsModule,
     MatExpansionModule,
     DragDropModule,
-    MatButtonModule
+    MatButtonModule,
+    MatOptionModule
   ],
   providers: [CharacterService],
   bootstrap: [AppComponent]

@@ -46,6 +46,11 @@ export interface CharData {
   fortSave: SaveData;
   refSave: SaveData;
 
+  spellAttackProf: number;
+  spellAttackStat: string;
+  spellDCProf: number;
+  spellDCStat: string;
+
   skills: SkillData[];
 
   ancestryFeats: Feat[];
