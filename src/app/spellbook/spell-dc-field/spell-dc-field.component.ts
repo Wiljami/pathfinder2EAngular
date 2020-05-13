@@ -5,17 +5,17 @@ import {CharacterService} from '../../services/character.service';
   selector: 'app-spell-dc-field',
   template: `
     <h3>Spell DC</h3>
-    total: {{character.spellDCStat.mod + profValue + 10}} =
-    base: 10
+    {{character.spellDCStat.mod + profValue + 10}} =
+    base 10 +
 
-    key: {{character.spellDCStat.mod}}
-    prof: {{profValue}}
+    <app-stat-picker [callback]="changeStat" [stat]="character.spellDCStat.name"></app-stat-picker>
+    {{character.spellDCStat.mod}} +
+
+    prof {{profValue}}
     <app-prof-level [value]="character.spellDCProf" [callback]="updateProf"></app-prof-level>
   `})
 export class SpellDCFieldComponent implements OnInit, DoCheck {
   profValue: number;
-
-  stats = ['Strength', 'Dexterity', 'Constitution'];
 
   constructor(public character: CharacterService) { }
 
@@ -38,5 +38,9 @@ export class SpellDCFieldComponent implements OnInit, DoCheck {
   updateProf = (newValue) => {
     this.character.spellDCProf = Number(newValue);
     this.updateProfValue();
+  }
+
+  changeStat = (newStat) => {
+    this.character.spellDCStat = newStat;
   }
 }

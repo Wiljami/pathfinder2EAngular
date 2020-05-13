@@ -5,9 +5,12 @@ import {CharacterService} from '../../services/character.service';
   selector: 'app-spell-attack-field',
   template: `
     <h3>Spell attack roll</h3>
-    total: {{character.spellAttackStat.mod + profValue}} =
-    key: {{character.spellAttackStat.mod}}
-    prof: {{profValue}}
+    {{character.spellAttackStat.mod + profValue}} =
+
+    <app-stat-picker [callback]="changeStat" [stat]="character.spellAttackStat.name"></app-stat-picker>
+    {{character.spellAttackStat.mod}} +
+
+    prof {{profValue}}
     <app-prof-level [value]="character.spellAttackProf" [callback]="updateProf"></app-prof-level>
   `})
 export class SpellAttackFieldComponent implements OnInit, DoCheck {
@@ -34,5 +37,9 @@ export class SpellAttackFieldComponent implements OnInit, DoCheck {
   updateProf = (newValue) => {
     this.character.spellAttackProf = Number(newValue);
     this.updateProfValue();
+  }
+
+  changeStat = (newStat) => {
+    this.character.spellAttackStat = newStat;
   }
 }
