@@ -32,6 +32,10 @@ import {MatButtonModule} from '@angular/material/button';
 import { CharacterDetailsFieldComponent } from './background/character-details-field/character-details-field.component';
 import { CampaignNotesFieldComponent } from './background/campaign-notes-field/campaign-notes-field.component';
 import { CharacterPersonalityFieldComponent } from './background/character-personality-field/character-personality-field.component';
+import { SpellAttackFieldComponent } from './spellbook/spell-attack-field/spell-attack-field.component';
+import { SpellDcFieldComponent } from './spellbook/spell-dc-field/spell-dc-field.component';
+import { SpellTraditionFieldComponent } from './spellbook/spell-tradition-field/spell-tradition-field.component';
+import { SpellsPerDayFieldComponent } from './spellbook/spells-per-day-field/spells-per-day-field.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +54,11 @@ import { CharacterPersonalityFieldComponent } from './background/character-perso
     FeatsFieldComponent,
     CharacterDetailsFieldComponent,
     CampaignNotesFieldComponent,
-    CharacterPersonalityFieldComponent
+    CharacterPersonalityFieldComponent,
+    SpellAttackFieldComponent,
+    SpellDcFieldComponent,
+    SpellTraditionFieldComponent,
+    SpellsPerDayFieldComponent,
   ],
   imports: [
     BrowserModule,

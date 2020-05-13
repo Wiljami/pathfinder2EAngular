@@ -8,7 +8,7 @@ import {SavingThrowComponent} from './saves-field/saving-throw/saving-throw.comp
 import {AttributesFieldComponent} from './attribute-field/attributes-field.component';
 import {DetailsFieldComponent} from './details-field/details-field.component';
 import {SkillsFieldComponent} from './skills-field/skills-field.component';
-import {ProfLevelComponent} from './prof-level/prof-level.component';
+import {ProfLevelComponent} from '../shared-components/prof-level/prof-level.component';
 import {SkillEntryComponent} from './skills-field/skill-entry/skill-entry.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatGridListModule} from '@angular/material/grid-list';
