@@ -1,5 +1,5 @@
 export interface Attack {
   name: string;
-  type: string;
+  traits: string;
   description: string;
 }

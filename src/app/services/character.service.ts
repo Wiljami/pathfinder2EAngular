@@ -85,7 +85,7 @@ export class CharacterService {
   ];
 
   attacks: Attack[] = [
-    { name: 'placeholder attack', type: 'placeholder type', description: 'placeholder description'}
+    { name: 'placeholder attack', traits: 'Attack traits', description: 'placeholder description'}
   ];
 
   ancestryFeats: Feat[] = [
@@ -167,6 +167,8 @@ export class CharacterService {
       spellDCProf: this.spellDCProf,
       spellDCStat: this.spellDCStat.name,
 
+      attacks: this.attacks,
+
       skills,
 
       ancestryFeats: this.ancestryFeats,
@@ -225,6 +227,8 @@ export class CharacterService {
     this.spellAttackStat = this.parseStatName(charData.spellAttackStat);
     this.spellDCProf = charData.spellDCProf;
     this.spellDCStat = this.parseStatName(charData.spellDCStat);
+
+    this.attacks = charData.attacks;
 
     this.willSave.prof = charData.willSave.prof;
     this.willSave.item = charData.willSave.item;

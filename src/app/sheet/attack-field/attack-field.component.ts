@@ -13,7 +13,7 @@ import {CharacterService} from '../../services/character.service';
 
     <div cdkDropListDisabled="{{listLocked}}" cdkDropList (cdkDropListDropped)="drop($event)">
       <div cdkDrag [cdkDragData]="attack" *ngFor="let attack of character.attacks">
-        <app-feat [feat]="attack" [callBack]="removeAttack" [locked]="listLocked"></app-feat>
+        <app-attack [attack]="attack" [callBack]="removeAttack" [locked]="listLocked"></app-attack>
       </div>
     </div>
   `
@@ -32,7 +32,7 @@ export class AttackFieldComponent implements OnInit {
   }
 
   addAttack() {
-    this.character.attacks.push({name : 'New Attack', description: '', type: ''});
+    this.character.attacks.push({name : 'New Attack', description: '', traits: ''});
   }
 
   lockSheet() {

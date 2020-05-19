@@ -1,4 +1,5 @@
 import {Feat} from './Feat';
+import {Attack} from './Attack';
 
 export interface CharData {
   name: string;
@@ -50,6 +51,8 @@ export interface CharData {
   spellAttackStat: string;
   spellDCProf: number;
   spellDCStat: string;
+
+  attacks: Attack[];
 
   skills: SkillData[];
 
