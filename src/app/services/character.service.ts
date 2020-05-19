@@ -4,6 +4,7 @@ import {Skill} from './Skill';
 import {SavingThrow} from './SavingThrow';
 import {CharData, SkillData} from './CharData';
 import {Feat} from './Feat';
+import {Attack} from './Attack';
 
 @Injectable({
   providedIn: 'root'
@@ -81,6 +82,10 @@ export class CharacterService {
     { name: 'placeholder INT skill', stat: this.int, prof: 0 },
     { name: 'placeholder WIS skill', stat: this.wis, prof: 0 },
     { name: 'placeholder CHA skill', stat: this.cha, prof: 0 }
+  ];
+
+  attacks: Attack[] = [
+    { name: 'placeholder attack', type: 'placeholder type', description: 'placeholder description'}
   ];
 
   ancestryFeats: Feat[] = [

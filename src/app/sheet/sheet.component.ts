@@ -18,15 +18,21 @@ import { Component, OnInit } from '@angular/core';
       </mat-grid-tile>
       <mat-grid-tile [colspan]="2" [rowspan]="3">
       </mat-grid-tile>
-
-
-      <mat-grid-tile [colspan]="3" [rowspan]="2">
-      </mat-grid-tile>
-      <mat-grid-tile [colspan]="3" [rowspan]="5">
-        <app-skills-field></app-skills-field>
-      </mat-grid-tile>
     </mat-grid-list>
-  `
+
+    <div class="row">
+      <div class="column">
+        <app-attack-field></app-attack-field>
+      </div>
+      <div class="column">
+        <app-skills-field></app-skills-field>
+      </div>
+    </div>
+  `,
+  styles: [
+    '.row {display: flex;}',
+    '.column {flex: 50%; padding: 10px}'
+  ]
 })
 
 

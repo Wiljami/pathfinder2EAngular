@@ -38,6 +38,7 @@ import { SpellTraditionFieldComponent } from './spellbook/spell-tradition-field/
 import { SpellsPerDayFieldComponent } from './spellbook/spells-per-day-field/spells-per-day-field.component';
 import {MatOptionModule} from '@angular/material/core';
 import { StatPickerComponent } from './shared-components/stat-picker/stat-picker.component';
+import { AttackFieldComponent } from './sheet/attack-field/attack-field.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { StatPickerComponent } from './shared-components/stat-picker/stat-picker
     SpellTraditionFieldComponent,
     SpellsPerDayFieldComponent,
     StatPickerComponent,
+    AttackFieldComponent,
   ],
   imports: [
     BrowserModule,
