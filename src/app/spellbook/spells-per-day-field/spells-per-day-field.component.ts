@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-spells-per-day-field',
-  templateUrl: './spells-per-day-field.component.html',
-  styleUrls: ['./spells-per-day-field.component.css']
+  template: ``
 })
 export class SpellsPerDayFieldComponent implements OnInit {
 

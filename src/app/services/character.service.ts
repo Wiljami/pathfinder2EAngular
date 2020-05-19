@@ -50,37 +50,37 @@ export class CharacterService {
 
   fortSave: SavingThrow = {
     name: 'Fortitude',
-    prof: 2,
+    prof: 0,
     item: 0,
     stat: this.con
   };
 
   refSave: SavingThrow = {
     name: 'Reflex',
-    prof: 2,
+    prof: 0,
     item: 0,
     stat: this.dex
   };
 
   willSave: SavingThrow = {
     name: 'Will',
-    prof: 2,
+    prof: 0,
     item: 0,
     stat: this.wis
   };
 
-  spellAttackProf = 4;
+  spellAttackProf = 0;
   spellAttackStat = this.int;
-  spellDCProf = 2;
+  spellDCProf = 0;
   spellDCStat = this.int;
 
   skills: Skill[] = [
-    { name: 'placeholder STR skill', stat: this.str, prof: 2 },
-    { name: 'placeholder DEX skill', stat: this.dex, prof: 4 },
-    { name: 'placeholder CON skill', stat: this.con, prof: 6 },
-    { name: 'placeholder INT skill', stat: this.int, prof: 8 },
-    { name: 'placeholder WIS skill', stat: this.wis, prof: 2 },
-    { name: 'placeholder CHA skill', stat: this.cha, prof: 4 }
+    { name: 'placeholder STR skill', stat: this.str, prof: 0 },
+    { name: 'placeholder DEX skill', stat: this.dex, prof: 0 },
+    { name: 'placeholder CON skill', stat: this.con, prof: 0 },
+    { name: 'placeholder INT skill', stat: this.int, prof: 0 },
+    { name: 'placeholder WIS skill', stat: this.wis, prof: 0 },
+    { name: 'placeholder CHA skill', stat: this.cha, prof: 0 }
   ];
 
   ancestryFeats: Feat[] = [
